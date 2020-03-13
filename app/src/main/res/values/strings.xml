@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">GoldPriceMVVM</string>
+    <string name="API_KEY"></string>
+</resources>
