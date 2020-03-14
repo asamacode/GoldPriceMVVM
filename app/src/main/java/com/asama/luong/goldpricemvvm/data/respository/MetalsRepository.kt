@@ -1,5 +1,9 @@
 package com.asama.luong.goldpricemvvm.data.respository
 
-import com.asama.luong.goldpricemvvm.data.network.MetalsPriceDataSource
+import androidx.lifecycle.LiveData
+import com.asama.luong.goldpricemvvm.data.db.entity.Rates
 
-interface MetalsRepository : MetalsPriceDataSource
+interface MetalsRepository {
+
+    suspend fun getCurrentMetalsData(): LiveData<Rates>
+}
