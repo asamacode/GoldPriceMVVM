@@ -31,7 +31,7 @@ class MainActivity : BaseActivity(), KodeinAware {
     }
 
     private fun bindUI() = launch {
-        showDialogLoading()
+//        showDialogLoading()
         val metalsData = mainViewModel.metalsData.await()
 
         metalsData.observe(this@MainActivity, Observer {

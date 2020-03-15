@@ -7,6 +7,7 @@ import com.asama.luong.goldpricemvvm.utils.lazyDefered
 class MainViewModel( private val metalsRepository: MetalsRepository ) : ViewModel(){
 
     val metalsData by lazyDefered {
+
         metalsRepository.getCurrentMetalsData()
     }
 

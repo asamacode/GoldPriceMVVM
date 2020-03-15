@@ -18,8 +18,8 @@ interface APIGoldPriceService {
 
     @GET("latest")
     fun getCurrentPrice(
-        @Query("base ") currency: String,
-        @Query("symbols ") symbols: String
+        @Query("base") currency: String,
+        @Query("symbols") symbols: String
     ): Deferred<Metals>
 
     companion object {

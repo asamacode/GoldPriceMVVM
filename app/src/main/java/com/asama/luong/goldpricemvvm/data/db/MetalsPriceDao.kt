@@ -15,5 +15,5 @@ interface MetalsPriceDao {
     fun saveData(rates : Rates)
 
     @Query("SELECT * FROM Rates WHERE id = $CURRENT_RATES_ID")
-    fun getCurrentMetalsData() : LiveData<Rates>?
+    fun getCurrentMetalsData() : LiveData<Rates>
 }

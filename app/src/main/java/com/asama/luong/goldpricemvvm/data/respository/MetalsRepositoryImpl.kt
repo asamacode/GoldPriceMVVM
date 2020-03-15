@@ -41,13 +41,13 @@ class MetalsRepositoryImpl(
         return withContext(Dispatchers.IO) {
             initMetalsData()
             return@withContext metalsPriceDao.getCurrentMetalsData()
-        }!!
+        }
     }
 
     //init check if data exist or not
     private suspend fun initMetalsData() {
         val lastData = metalsPriceDao.getCurrentMetalsData()
-        if (lastData == null) {
+        if (lastData.value == null) {
             loadMetalsData()
             return
         }

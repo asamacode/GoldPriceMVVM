@@ -9,7 +9,8 @@ const val CURRENT_RATES_ID = 0
 data class Rates(
     val GBP : Float,
     val JPY: Float,
-    val EUR: Float
+    val EUR: Float,
+    val USD: Float
 ) {
     @PrimaryKey(autoGenerate = false)
     var id : Int = CURRENT_RATES_ID
